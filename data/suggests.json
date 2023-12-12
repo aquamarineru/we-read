@@ -1,0 +1,34 @@
+{
+    "suggests": [
+        {
+            "title": "Best Books 2023",
+            "image": "assets/list_1.png",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos."
+        },
+        {
+            "title": "New releases",
+            "image": "assets/list_2.png",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos."
+        },
+        {
+            "title":"Staff picks",
+            "image": "assets/list_3.png",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos."
+        },
+        {
+            "title": "Comics and Grafic Novels",
+            "image": "assets/list_4.png",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos."
+        },
+        {
+            "title": "Horror and Thrillers",
+            "image": "assets/list_5.png",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos."
+        },
+        {
+            "title": "Young Adult",
+            "image": "assets/list_6.png",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos."
+        }
+    ]
+}

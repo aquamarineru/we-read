@@ -1,0 +1,61 @@
+{
+    "books": [
+        {
+          "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.EvuW7YdSMrWtg_V3cvh98gHaLr%26pid%3DApi&f=1&ipt=e81dd41bf7248edc2a20d246d5ef2dd6c75b26230643ed7089d5f87e13f87863&ipo=images",
+          "tags": ["Fiction", "Adventure"],
+          "title": "Dune",
+          "author": "Frank Herbert",
+          "ISBN": "978-0-441-17271-9"
+        },
+        {
+          "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.penguin.com.au%2Fcovers%2Foriginal%2F9781785150357.jpg&f=1&nofb=1&ipt=c56252a43595c1dd19f4a65bb41d76a96882083d75f1ba73780dda37ea335f9a&ipo=images",
+          "tags": ["Fiction", "Classic"],
+          "title": "To Kill a Mockingbird",
+          "author": "Harper Lee",
+          "ISBN": "978-0-06-112008-4"
+        },
+        {
+          "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.penguin.com.au%2Fcovers%2Foriginal%2F9781847946249.jpg&f=1&nofb=1&ipt=f7e8b9e8c347df374e83c900671fdbc5f6275dfa805641f9e86d7eca930b9127&ipo=images",
+          "tags": ["Non-Fiction", "Self-Help"],
+          "title": "The Power of Habit",
+          "author": "Charles Duhigg",
+          "ISBN": "978-0-8129-7818-6"
+        },
+        {
+          "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.G_NxXyG1Byk2hGPmo8xhOwHaLQ%26pid%3DApi&f=1&ipt=14dad3ba603223ae8384af0e6a5c33e84246bd0f10e03fd32b1c1e3cc3717845&ipo=images",
+          "tags": ["Fantasy", "Adventure"],
+          "title": "The Hobbit",
+          "author": "J.R.R. Tolkien",
+          "ISBN": "978-0-618-00221-4"
+        },
+        
+        {
+          "image": "https://imgproxy.pdfroom.com/NECGKxeJn-EPZaALjFAzyfiijXy0HU7jv799HigxY3E/rs:auto:1200:630:1/g:no/RTFkNHA3SkxkT2IucG5n.jpg",
+          "tags": ["Mystery", "Thriller"],
+          "title": "The Da Vinci Code",
+          "author": "Dan Brown",
+          "ISBN": "978-0-7679-2767-8"
+        },
+        {
+          "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.penguin.com.au%2Fcovers%2Foriginal%2F9780593077184.jpg&f=1&nofb=1&ipt=048490d693588fa42ae242cab6f2898b7db42aeedc76a199589dc91567283557&ipo=images",
+          "tags": ["Science", "Cosmology"],
+          "title": "A Brief History of Time",
+          "author": "Stephen Hawking",
+          "ISBN": "978-0-553-10953-5"
+        },
+        {
+          "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.penguin.com.au%2Fcovers%2Foriginal%2F9781784870799.jpg&f=1&nofb=1&ipt=98033bb9ad3a4cdc367a1bbadf440fce8b4b4b8e71c4554a4eebd45316c1c253&ipo=images",
+          "tags": ["Fiction", "Classic"],
+          "title": "To Kill a Mockingbird",
+          "author": "Harper Lee",
+          "ISBN": "978-0-06-112008-4"
+        },
+        {
+          "image": "http://www.bibdsl.co.uk/imagegallery2/bds/201143/9781408703748.JPG",
+          "tags": ["Non-Fiction", "Biography"],
+          "title": "Steve Jobs",
+          "author": "Walter Isaacson",
+          "ISBN": "978-1-4516-4853-9"
+        } 
+    ]
+  }

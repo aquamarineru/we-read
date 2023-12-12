@@ -20,10 +20,10 @@ export default function Navbar() {
     const filteredLinks = links.filter((link) => link.label !== 'Home');
 
   return (
-    <header className="bg-bgSecondary fixed left-0 top-0 w-full p-4">
+    <header className="bg-bgSecondary fixed left-0 top-0 w-full p-4 z-10">
       <div className="container mx-auto flex items-center justify-between lg:gap-5">
         <a href="/" className='cursor-pointer'>
-          <img src='../public/assets/Logo.png' alt="Logo" className="h-8 lg:h-12" />
+          <img src='/assets/Logo.png' alt="Logo" className="h-8 lg:h-12" />
         </a>
         <Search />
         <div className="lg:flex hidden space-x-4 cursor-pointer">
