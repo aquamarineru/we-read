@@ -3,7 +3,7 @@ import Title from '../Title';
 import Container from '../Container';
 import Carousel from '../Carousel';
 import Card from '../Card';
-
+// сделать проверку если у меня нет друзей значит не показывать этот блок
 export default function Liked() {
     const [books, setBooks] = useState([]);
 
@@ -11,7 +11,6 @@ export default function Liked() {
     fetch('/data/books.json')
       .then((response) => response.json())
       .then((data) => {
-        console.log(data); 
         setBooks(data.books); 
       })
       .catch((error) => {
@@ -25,7 +24,7 @@ export default function Liked() {
     <div className='w-full h-screen bg-light relative'>
     <Container>
       <div className='flex flex-row items-center justify-around lg:justify-between py-5'>
-        <Title>Because Linda liked</Title>
+        <Title>Because {name} liked</Title>
         <button
           className='text-primary hover:text-brand cursor-pointer transform transition-all hover:scale-105 ease-in-out hidden md:block text-sm'
           aria-label='See all recommendations'

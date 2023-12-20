@@ -8,15 +8,22 @@ export default function PersonalRecom() {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    fetch('/data/books.json')
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data); 
-        setBooks(data.books); 
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-      });
+    const apiUrl = import.meta.env.VITE_API_URL;
+    const token = import.meta.env.VITE_AUTH_TOKEN;
+    fetch(`${apiUrl}/personal_recommendations`, {
+      method: 'GET',
+      headers: {
+        'Authorization': `Token ${token}`, 
+      }
+    })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      setBooks(data.recommended_books);
+    })
+    .catch((error) => {
+      console.error('Error fetching data:', error);
+    });
   }, []);
   if (!books || books.length === 0) {
     return null;
@@ -36,7 +43,7 @@ export default function PersonalRecom() {
         </div>
         <Carousel>
           {books.map((book) => (
-            <Card key={book.ISBN} book={book} />
+            <Card key={book.id} book={book} />
           ))}
         </Carousel>
         <img src='/assets/book_2.svg' alt='Book' className='hidden xl:block md:absolute bottom-0 left-0' />

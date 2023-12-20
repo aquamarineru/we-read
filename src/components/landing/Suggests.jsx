@@ -20,7 +20,7 @@ export default function Suggests() {
     }, []);
   
     return (
-      <div className='w-full h-screen bg-light'>
+      <div className='w-full h-full bg-light'>
         <Container>
           <Title title='Suggests'>WeRead suggests</Title>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 pt-10'>
