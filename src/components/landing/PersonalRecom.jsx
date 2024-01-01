@@ -9,7 +9,7 @@ export default function PersonalRecom() {
 
   useEffect(() => {
     const apiUrl = import.meta.env.VITE_API_URL;
-    const token = import.meta.env.VITE_AUTH_TOKEN;
+    const token = import.meta.env.VITE_AUTH_PERSONAL_TOKEN;
     fetch(`${apiUrl}/personal_recommendations`, {
       method: 'GET',
       headers: {
@@ -25,6 +25,31 @@ export default function PersonalRecom() {
       console.error('Error fetching data:', error);
     });
   }, []);
+    // New useEffect for adjusting card heights
+    useEffect(() => {
+      const adjustCardHeights = () => {
+        // Query all card elements
+        const cards = document.querySelectorAll('.carousel-card');
+        let maxHeight = 0;
+  
+        // Reset the height to compute the maximum height
+        cards.forEach(card => {
+          card.style.height = 'auto';
+          maxHeight = Math.max(maxHeight, card.offsetHeight);
+        });
+  
+        // Apply the maximum height to all cards
+        cards.forEach(card => {
+          card.style.height = `${maxHeight}px`;
+        });
+      };
+  
+      adjustCardHeights();
+  
+      // Re-run when window resizes or books data changes
+      window.addEventListener('resize', adjustCardHeights);
+      return () => window.removeEventListener('resize', adjustCardHeights);
+    }, [books]);
   if (!books || books.length === 0) {
     return null;
   }
