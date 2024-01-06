@@ -2,7 +2,7 @@ import React from 'react'
 
 import Hero from './landing/Hero'
 import PersonalRecom from './landing/PersonalRecom'
-import FriendsLiked from './landing/FriendsLiked'
+import FriendsLiked from './landing/Liked'
 import InputField from './landing/InputField'
 import Suggests from './landing/Suggests'
 
