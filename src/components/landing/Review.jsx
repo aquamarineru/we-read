@@ -11,7 +11,6 @@ export default function Review() {
         fetch('/data/reviews.json')
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
           setReviews(data.reviews);
         })
         .catch((error) => {
@@ -24,7 +23,7 @@ export default function Review() {
       }
 
   return (
-    <div className='h-screen w-full'>
+    <div className='h-full w-full'>
         <Container>
             <Title> Top reviews of the week</Title>
             <div className='flex flex-col md:flex-row justify-between md:gap-2'>
@@ -39,10 +38,7 @@ export default function Review() {
             ))}
           </div>
         </div>
-
         </Container>
-
-      
     </div>
   )
 }

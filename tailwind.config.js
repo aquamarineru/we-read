@@ -18,7 +18,8 @@ export default {
       'input': '#A8A6B2',
     },
     backgroundImage: {
-      'main': "url('/public/assets/bg.svg')"
+      'main': "url('/public/assets/bg.svg')",
+      "club": "url('/public/assets/photo.png')",
     },
     fontFamily: {
       'sans': ['DM Sans', 'sans-serif'],
