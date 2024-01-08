@@ -1,5 +1,8 @@
 import React from 'react';
 import Container from './Container';
+import { SlSocialFacebook } from "react-icons/sl";
+import { SlSocialInstagram } from "react-icons/sl";
+import { SlSocialYoutube } from "react-icons/sl";
 
 const links = [
   {
@@ -40,6 +43,24 @@ const links = [
   }
 ];
 
+const connect = [
+  {
+    name: 'Facebook',
+    href: 'https://www.facebook.com/weread',
+    icon: <SlSocialFacebook />,
+  },
+  {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/weread',
+    icon: <SlSocialInstagram />,
+  },
+  {
+    name: 'YouTube',
+    href: 'https://www.youtube.com/weread',
+    icon: <SlSocialYoutube />,
+  },
+];
+
 export default function Footer() {
   
 
@@ -57,11 +78,22 @@ export default function Footer() {
 
         {/* Social Media Section */}
         <div className="col-span-1">
-          <div>Social Media</div>
+          <h3>Connect</h3>
+          <div className='flex items-center justify-around'>
+            {connect.map((link) => (
+              <a
+                href={link.href}
+                key={link.name}
+                className="block bg-light p-4 rounded-full text-brand hover:text-primary pt-5"
+              >
+                {link.icon}
+              </a>
+            ))
+            }
+          </div>
         </div>
       </div>
-
-      <div className="text-center py-2">© WeRead, Inc. All Rights Reserved.</div>
+      <div className="py-2 text-sm font-light">© WeRead, Inc. All Rights Reserved.</div>
       </Container>
     </div>
   );
