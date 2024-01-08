@@ -11,7 +11,7 @@ import JoinOurClub from './landing/JoinOurClub'
 
 export default function LandingPage() {
   return (
-    <div className='flex flex-col '>
+    <div className='flex flex-col'>
         <Hero />
         <PersonalRecom />
         <FriendsLiked  />
