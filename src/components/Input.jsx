@@ -46,7 +46,7 @@ export default function Input() {
   return (
     <form onSubmit={handleSubmit} className="flex items-center space-x-2 bg-white rounded-full px-2 relative md:w-[400px]">
       <input 
-        className={`flex-grow px-4 py-2 rounded-full text-sm focus:outline-none ${error ? 'border-2 border-red-500' : ''}`} 
+        className={`flex-grow px-4 py-2 rounded-full text-sm focus:outline-none focus:border-primary focus:border-[1px] ${error ? 'border-[1px] border-[#ff0000] ' : ''}`} 
         type="email" 
         placeholder="Enter email address"
         value={email}

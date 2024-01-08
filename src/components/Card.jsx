@@ -24,7 +24,7 @@ export default function Card({ book }) {
           <p className='text-sm text-text mt-4 pb-2'>{book.author}</p>
           <div className='flex items-center gap-2 py-2'>
             <img src='/assets/star.svg' alt='Star rating' />
-            <span className='text-xl'>4.4</span>
+            <span className='text-xl'>{book.rating}</span>
           </div>
           <Button type='bordered'>Go to Amazon</Button>
         </div>

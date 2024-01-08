@@ -1,0 +1,34 @@
+{
+    "reviews": [
+        {
+            "id": 1,
+            "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.EvuW7YdSMrWtg_V3cvh98gHaLr%26pid%3DApi&f=1&ipt=e81dd41bf7248edc2a20d246d5ef2dd6c75b26230643ed7089d5f87e13f87863&ipo=images",
+            "author_img": "assets/author.png",
+            "author": "John Doe",
+            "title": "“The best book in the world. The best book in the world”",
+            "rating": 4.1,
+            "description": "'Flowers for Eldzeron' is a profoundly moving and beautifully written novel that takes its readers on an emotional journey through the complexities of human connection, loss, and the enduring power of love. Written by an author whose talent for storytelling is nothing short of extraordinary  talent for storytelling is nothing short of extraordinary talent for of whose talent for sto storyte...",
+            "movie_id": 1
+        },
+        {
+            "id": 2,
+            "image": "https://prodimage.images-bn.com/pimages/9781782744788_p0_v1_s550x406.jpg",
+            "author_img": "assets/author.png",
+            "author": "John Doe",
+            "title": "“A Journey Through Time”",
+            "rating": 4.7,
+            "description": "'Chronicles of History' offers a mesmerizing exploration of the world's most pivotal moments. The author, with a keen eye for detail, weaves a narrative that is as educational as it is thrilling. From the rise and fall of ancient civilizations to the modern digital revolution, this book captures the essence of humanity's relentless quest for progress and understanding.",
+            "movie_id": 3
+        },
+        {
+            "id": 3,
+            "image": "http://www.alyssajmontgomery.com/wp-content/uploads/EchoesoftheHeart_Final.jpg",
+            "author_img": "assets/author.png",
+            "author": "John Doe",
+            "title": "“Echoes of the Heart”",
+            "rating": 4.9,
+            "description": "In 'Echoes of the Heart', the reader is taken on a poignant journey of love, loss, and redemption. The author's lyrical prose and deep understanding of the human psyche create a story that resonates with the soul. It's a profound reflection on the fragility of life and the eternal search for meaning in our connections with others.",
+            "movie_id": 5
+        }
+    ]
+}

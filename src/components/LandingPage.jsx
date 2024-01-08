@@ -5,6 +5,7 @@ import PersonalRecom from './landing/PersonalRecom'
 import FriendsLiked from './landing/Liked'
 import InputField from './landing/InputField'
 import Suggests from './landing/Suggests'
+import Review from './landing/Review'
 
 export default function LandingPage() {
   return (
@@ -14,6 +15,7 @@ export default function LandingPage() {
         <FriendsLiked  />
         <Suggests />
         <InputField />
+        <Review />
     </div>
   )
 }
