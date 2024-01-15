@@ -17,7 +17,7 @@ export default function Search({ onSearch }) {
   };
 
   return (
-    <div className="w-1/2 lg:w-1/3 mx-auto"> 
+    <div className="flex-grow "> 
       <form onSubmit={handleSubmit} className="flex items-center relative">
           <button
           type="submit"
@@ -31,7 +31,8 @@ export default function Search({ onSearch }) {
           placeholder="Search by Title, Author or ISBN"
           value={query}
           onChange={handleInputChange}
-          className="w-full p-2 pl-6 rounded-full text-xs font-light focus:outline-none focus:ring focus:border-primary"
+          className="w-full p-2 pl-8 rounded-full text-xs font-light focus:outline-none focus:ring focus:border-primary"
+          style={{ maxWidth: '350px' }}
         />
         
       </form>
