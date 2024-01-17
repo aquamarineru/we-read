@@ -19,7 +19,7 @@ export default {
     },
     backgroundImage: {
       'main': "url('/public/assets/bg.svg')",
-      "club": "url('/public/assets/photo.png')",
+      "club": "url('/assets/photo.png')",
     },
     fontFamily: {
       'sans': ['DM Sans', 'sans-serif'],

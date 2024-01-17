@@ -11,7 +11,7 @@ const links = [
   ];
 
 
-export default function Navbar() {
+export default function Navbar({ onSearch }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => setIsOpen(!isOpen);
@@ -21,11 +21,13 @@ export default function Navbar() {
 
   return (
     <header className="bg-bgSecondary fixed left-0 top-0 w-full p-4 z-10">
-      <div className="container mx-auto flex items-center justify-between lg:gap-5">
-        <a href="/" className='cursor-pointer'>
-          <img src='/assets/Logo.png' alt="Logo" className="h-8 lg:h-12" />
-        </a>
-        <Search />
+      <div className="container mx-auto flex items-center justify-between ">
+        <div className='flex flex-grow items-center gap-3 md:flex-row'>
+          <a href="/" className='cursor-pointer'>
+            <img src='/assets/Logo.png' alt="Logo" className="h-8 lg:h-12" />
+          </a>
+          <Search onSearch={onSearch} />
+        </div>
         <div className="lg:flex hidden space-x-4 cursor-pointer">
         {filteredLinks.map((link) => (
           <a
@@ -63,9 +65,9 @@ export default function Navbar() {
             ))}
           </div>
         </nav>
-        <div className="flex flex-row gap-1 items-center">
+        <div className="flex flex-row gap-1 ml-3 items-center cursor-pointer hover:text-hover">
           <CiUser />
-          <span className=" text-xs font-light lg:text-sm">My shelf</span>
+          <span className="text-xs font-light lg:text-sm">My shelf</span>
         </div>
       </div>
     </header>
