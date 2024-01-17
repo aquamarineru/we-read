@@ -18,7 +18,7 @@ export default function Card({ book }) {
   return (
     <div className='p-4 relative flex flex-col items-center' >
       <div className='absolute top-10 right-10 bg-bgSecondary/70 rounded-full p-3 lg:right-16 xl:right-10'>
-        <img src='/assets/bookmark.svg' alt='Bookmark icon' />
+        <img src='/assets/bookmark.svg' alt='Bookmark icons' />
       </div>
       <img src={book.cover_url} alt={`Cover of ${book.title}`} className='w-[200px] h-[250px] rounded-md p-2' />
       <div className='flex flex-col justify-between items-start  carousel-card'>
