@@ -4,45 +4,51 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 export default function Input() {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
+
   const apiUrl = import.meta.env.VITE_API_URL;
+
   const validateEmail = (email) => {
     return email.match(
       // eslint-disable-next-line no-useless-escape
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     );
   };
-
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
-    if (validateEmail(email)) {
-      setError(''); 
-      try {
-        const response = await fetch(`${apiUrl}/emails`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ email: email }),
-        });
-        const data = await response.json();
-        if (response.ok) {
-          console.log('Email saved:', data);
-          
-          setEmail(''); 
-        } else {
-          
-          setError(data.message || 'An error occurred while saving the email.');
-        }
-      } catch (error) {
-        setError('Network error: Could not send email to the server.');
-        console.error('Fetch error:', error);
-      }
-    } else {
+    e.preventDefault();
+    if (!validateEmail(email)) {
       setError('Please enter a valid email address.');
+      return;
+    }
+  
+    try {
+      const token = import.meta.env.VITE_AUTH_EMAIL_TOKEN; 
+      const response = await fetch(`${apiUrl}/email_subscription/`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`, 
+        },
+        body: JSON.stringify({ email: email }),
+      });
+      console.log('Using token:', token);
+      if (!response.ok) {
+        const text = await response.text();
+        setError(text || 'An error occurred while saving the email.');
+        console.error('Server error:', text);
+        return;
+      }
+  
+      const data = await response.json();
+      console.log('Email saved:', data);
+      setEmail('');
+      setError(''); 
+  
+    } catch (error) {
+      setError('Network error: Could not send email to the server.');
+      console.error('Fetch error:', error);
     }
   }
-
-
+  
   return (
     <form onSubmit={handleSubmit} className="flex items-center space-x-2 bg-white rounded-full px-2 relative md:w-[400px]">
       <input 

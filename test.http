@@ -1,0 +1,6 @@
+@host = https://weread-app.onrender.com
+
+
+###
+GET {{host}}/api/book_search/?search_text=043965548X
+Content-Type: application/json
