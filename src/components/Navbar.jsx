@@ -21,10 +21,10 @@ export default function Navbar({ onSearch }) {
 
   return (
     <header className="bg-bgSecondary fixed left-0 top-0 w-full p-4 z-10">
-      <div className="container mx-auto flex items-center justify-between ">
+      <div className="container mx-auto flex items-center justify-between lg:px-20 ">
         <div className='flex flex-grow items-center gap-3 md:flex-row'>
           <a href="/" className='cursor-pointer'>
-            <img src='/assets/Logo.png' alt="Logo" className="h-8 lg:h-12" />
+            <img src='/assets/Logo.png' alt="Logo" className="h-11 w-11 lg:h-12" />
           </a>
           <Search onSearch={onSearch} />
         </div>
@@ -45,7 +45,11 @@ export default function Navbar({ onSearch }) {
           className="lg:hidden block text-white text-2xl z-20"
           onClick={toggleMenu}
         >
-          {isOpen ? '✕' : '☰'}
+          {
+            isOpen 
+              ? '✕' 
+              : <img src="/assets/burger.svg" alt="Menu" style={{ width: '24px', height: '24px' }} />
+          }
         </button>
         <nav
           className={`lg:hidden fixed h-screen inset-0 flex flex-col justify-center transition-transform top-0 left-0 w-full transition-height transform items-center bg-bgSecondary z-0 ${
@@ -65,7 +69,7 @@ export default function Navbar({ onSearch }) {
             ))}
           </div>
         </nav>
-        <div className="flex flex-row gap-1 ml-3 items-center cursor-pointer hover:text-hover">
+        <div className="hidden  md:flex flex-row gap-1 ml-3 items-center cursor-pointer hover:text-hover">
           <CiUser />
           <span className="text-xs font-light lg:text-sm">My shelf</span>
         </div>

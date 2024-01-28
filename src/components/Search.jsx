@@ -18,7 +18,7 @@ export default function Search({ onSearch }) {
   };
 
   return (
-    <div className="flex-grow "> 
+    <div className="hidden md:block flex-grow "> 
       <form onSubmit={handleSubmit} className="flex items-center relative">
         <button type="submit" className="text-sm absolute pl-2" aria-label="Search">
           <IoSearchOutline />
