@@ -18,17 +18,17 @@ export default function Search({ onSearch }) {
   };
 
   return (
-    <div className="hidden md:block flex-grow "> 
-      <form onSubmit={handleSubmit} className="flex items-center relative">
-        <button type="submit" className="text-sm absolute pl-2" aria-label="Search">
-          <IoSearchOutline />
+    <div className="hidden md:block md:pl-4 flex-grow "> 
+      <form onSubmit={handleSubmit} className="flex items-center relative ">
+        <button type="submit" className="text-sm absolute px-6" aria-label="Search">
+          <img src="/assets/search.svg" alt="Search" style={{ width: '24px', height: '24px' }} />
         </button>
         <input
           type="text"
           placeholder="Search by Title, Author, or ISBN"
           value={searchText}
           onChange={handleInputChange}
-          className="w-full p-2 pl-8 rounded-full text-xs font-light focus:outline-none focus:ring focus:border-primary"
+          className="w-full h-14 pl-14 rounded-full text-base focus:outline-none focus:ring focus:border-primary"
           style={{ maxWidth: '350px' }}
         />
       </form>

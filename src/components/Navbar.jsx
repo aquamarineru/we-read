@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import Search from './Search';
-import { CiUser } from 'react-icons/ci';
+
 
 const links = [
     { href: '/', label: 'Home' },
@@ -20,20 +20,20 @@ export default function Navbar({ onSearch }) {
     const filteredLinks = links.filter((link) => link.label !== 'Home');
 
   return (
-    <header className="bg-bgSecondary fixed left-0 top-0 w-full p-4 z-10">
-      <div className="container mx-auto flex items-center justify-between lg:px-20 ">
-        <div className='flex flex-grow items-center gap-3 md:flex-row'>
+    <header className="bg-bgSecondary fixed left-0 top-0 w-full p-4 z-10 h-20 md:h-[104px] 2xl:px-[184px] ">
+      <div className="container mx-auto flex items-center justify-between md:px-12 lg:px-20 ">
+        <div className='flex flex-grow items-center  md:flex-row'>
           <a href="/" className='cursor-pointer'>
-            <img src='/assets/Logo.png' alt="Logo" className="h-11 w-11 lg:h-12" />
+            <img src='/assets/Logo.png' alt="Logo" className="h-11 w-11 md:w-[66px] md:h-[66px]" />
           </a>
           <Search onSearch={onSearch} />
         </div>
-        <div className="lg:flex hidden space-x-4 cursor-pointer">
+        <div className="lg:flex hidden space-x-4 cursor-pointer ml-4 ">
         {filteredLinks.map((link) => (
           <a
             key={link.href}
             href={link.href}
-            className="text-title font-light text-sm hover:text-primary"
+            className="text-black text-base hover:text-primary"
             onClick={closeMenu}
           >
             {link.label}
@@ -69,9 +69,9 @@ export default function Navbar({ onSearch }) {
             ))}
           </div>
         </nav>
-        <div className="hidden  md:flex flex-row gap-1 ml-3 items-center cursor-pointer hover:text-hover">
-          <CiUser />
-          <span className="text-xs font-light lg:text-sm">My shelf</span>
+        <div className="hidden px-2 md:flex flex-row gap-1 ml-3 items-center cursor-pointer hover:text-hover">
+          <img src="/assets/person.svg" alt="person" className='pl' style={{ width: '24px', height: '24px' }}/>
+          <span className="text-base">My shelf</span>
         </div>
       </div>
     </header>

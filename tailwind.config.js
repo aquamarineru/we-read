@@ -16,6 +16,8 @@ export default {
       'title': '#17151C',
       'text': '#7E7B8A',
       'input': '#A8A6B2',
+      'white': '#FFFFFF',
+      'black': '#1D1A23',
     },
     backgroundImage: {
       'main': "url('/public/assets/bg.svg')",
@@ -28,6 +30,14 @@ export default {
       fill: {
         hover: '#957DE5', 
         active: '#7B5DDF', 
+      },
+      screens: {
+        'xs': '320px',
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1440px',
+        '2xl': '1920px',
       },
     },
   },

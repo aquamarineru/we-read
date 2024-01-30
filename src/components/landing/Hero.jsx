@@ -12,8 +12,8 @@ export default function Hero() {
             >Choose a book</Button>
         </div>
         <div className='w-full flex justify-center mt-8 lg:mt-60 lg:justify-between lg:items-end relative'>
-        <img src="/assets/image_left.svg" alt="left" className="w-[254px] md:w-[414px] lg:absolute lg:-left-12 lg:inline-block" />
-        <img src="/assets/image_right.svg" alt="right" className="hidden lg:absolute  lg:inline-block lg:-right-12" />
+        {/* <img src="/assets/image_left.svg" alt="left" className="w-[254px] md:w-[414px] lg:absolute lg:-left-12 lg:inline-block" />
+        <img src="/assets/image_right.svg" alt="right" className="hidden lg:absolute  lg:inline-block lg:-right-12" /> */}
       </div>
     </div>
   )

@@ -15,7 +15,7 @@ export default function Button({ children, type, onClick, ariaLabel, disabled}) 
       }
       return (
         <button
-          className='bg-primary h-[44px] rounded-[40px] px-4 py-1.5 text-sm md:px-8 md:text-base text-light font-semibold hover:bg-hover hover:text-white focus:border-border active:bg-border transition duration-300 ease-in-out'
+          className='bg-primary h-11 rounded-[40px] px-4 py-1.5 text-base md:px-8 md:h-14 text-white font-semibold hover:bg-hover hover:text-white focus:border-border active:bg-border transition duration-300 ease-in-out'
           aria-label={ariaLabel}
           onClick={onClick}
           disabled={disabled}
