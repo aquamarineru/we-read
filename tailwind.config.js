@@ -18,6 +18,10 @@ export default {
       'input': '#A8A6B2',
       'white': '#FFFFFF',
       'black': '#1D1A23',
+      'tag-border': '#E8E8ED',
+    },
+    boxShadow: {
+      'custom': '0px 2px 2px 0px rgba(29, 26, 35, 0.25);'
     },
     backgroundImage: {
       'main': "url('/public/assets/bg.svg')",

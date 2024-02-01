@@ -25,28 +25,22 @@ export default function PersonalRecom() {
       console.error('Error fetching data:', error);
     });
   }, []);
-    // New useEffect for adjusting card heights
     useEffect(() => {
       const adjustCardHeights = () => {
-        // Query all card elements
+
         const cards = document.querySelectorAll('.carousel-card');
         let maxHeight = 0;
-  
-        // Reset the height to compute the maximum height
         cards.forEach(card => {
           card.style.height = 'auto';
           maxHeight = Math.max(maxHeight, card.offsetHeight);
         });
   
-        // Apply the maximum height to all cards
         cards.forEach(card => {
           card.style.height = `${maxHeight}px`;
         });
       };
   
       adjustCardHeights();
-  
-      // Re-run when window resizes or books data changes
       window.addEventListener('resize', adjustCardHeights);
       return () => window.removeEventListener('resize', adjustCardHeights);
     }, [books]);

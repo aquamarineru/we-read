@@ -13,9 +13,9 @@ export default function LandingPage() {
   return (
     <div className='flex flex-col'>
         <Hero />
-        {/* <PersonalRecom />
+        <PersonalRecom />
         <FriendsLiked  />
-        <Suggests />
+        {/* <Suggests />
         <InputField />
         <Review />
         <ReadingGirl />
