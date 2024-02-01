@@ -15,8 +15,8 @@ export default function LandingPage() {
         <Hero />
         <PersonalRecom />
         <FriendsLiked  />
-        {/* <Suggests />
-        <InputField />
+        <Suggests />
+        {/* <InputField />
         <Review />
         <ReadingGirl />
         <JoinOurClub /> */}

@@ -3,13 +3,16 @@ import Title from '../Title';
 import Container from '../Container';
 import Carousel from '../Carousel';
 import Card from '../Card';
+import Loader from '../Loader';
 
 export default function PersonalRecom() {
   const [books, setBooks] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const apiUrl = import.meta.env.VITE_API_URL;
     const token = import.meta.env.VITE_AUTH_PERSONAL_TOKEN;
+
     fetch(`${apiUrl}/personal_recommendations`, {
       method: 'GET',
       headers: {
@@ -23,27 +26,32 @@ export default function PersonalRecom() {
     })
     .catch((error) => {
       console.error('Error fetching data:', error);
-    });
+    })
+    .finally(() => setIsLoading(false)); // Removed the semicolon before .finally()
   }, []);
-    useEffect(() => {
-      const adjustCardHeights = () => {
 
-        const cards = document.querySelectorAll('.carousel-card');
-        let maxHeight = 0;
-        cards.forEach(card => {
-          card.style.height = 'auto';
-          maxHeight = Math.max(maxHeight, card.offsetHeight);
-        });
-  
-        cards.forEach(card => {
-          card.style.height = `${maxHeight}px`;
-        });
-      };
-  
-      adjustCardHeights();
-      window.addEventListener('resize', adjustCardHeights);
-      return () => window.removeEventListener('resize', adjustCardHeights);
-    }, [books]);
+  useEffect(() => {
+    const adjustCardHeights = () => {
+      const cards = document.querySelectorAll('.carousel-card');
+      let maxHeight = 0;
+      cards.forEach(card => {
+        card.style.height = 'auto';
+        maxHeight = Math.max(maxHeight, card.offsetHeight);
+      });
+      cards.forEach(card => {
+        card.style.height = `${maxHeight}px`;
+      });
+    };
+
+    adjustCardHeights();
+    window.addEventListener('resize', adjustCardHeights);
+    return () => window.removeEventListener('resize', adjustCardHeights);
+  }, [books]);
+
+  if (isLoading) {
+    return <Loader />; 
+  }
+
   if (!books || books.length === 0) {
     return null;
   }
