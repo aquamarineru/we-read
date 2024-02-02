@@ -10,7 +10,7 @@ export default function Layout({ onSearch }) {
         <main className="flex-grow">
           <Outlet />
         </main>
-{/*         <Footer /> */}
+        <Footer />
     </div>
   )
 }

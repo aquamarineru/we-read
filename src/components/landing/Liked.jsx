@@ -4,7 +4,7 @@ import Container from '../Container';
 import Carousel from '../Carousel';
 import Card from '../Card';
 // сделать проверку если у меня нет друзей значит не показывать этот блок
-export default function Liked() {
+export default function FriendsLiked() {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {

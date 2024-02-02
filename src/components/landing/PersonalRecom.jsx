@@ -1,35 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Title from '../Title';
 import Container from '../Container';
 import Carousel from '../Carousel';
 import Card from '../Card';
 import Loader from '../Loader';
 
-export default function PersonalRecom() {
-  const [books, setBooks] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const apiUrl = import.meta.env.VITE_API_URL;
-    const token = import.meta.env.VITE_AUTH_PERSONAL_TOKEN;
-
-    fetch(`${apiUrl}/personal_recommendations`, {
-      method: 'GET',
-      headers: {
-        'Authorization': `Token ${token}`, 
-      }
-    })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      setBooks(data.recommended_books);
-    })
-    .catch((error) => {
-      console.error('Error fetching data:', error);
-    })
-    .finally(() => setIsLoading(false)); // Removed the semicolon before .finally()
-  }, []);
-
+export default function PersonalRecom({books}) {
   useEffect(() => {
     const adjustCardHeights = () => {
       const cards = document.querySelectorAll('.carousel-card');
@@ -48,9 +24,6 @@ export default function PersonalRecom() {
     return () => window.removeEventListener('resize', adjustCardHeights);
   }, [books]);
 
-  if (isLoading) {
-    return <Loader />; 
-  }
 
   if (!books || books.length === 0) {
     return null;
